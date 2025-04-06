@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج 2 </title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="page-title">نموذج 2 </h1> <!-- عنوان الصفحة -->
+    </header>
+    <div class="container">
+        <div class="image-container">
+            <img src="design1.jpg" alt="صورة" class="image">
+            <div class="text-overlay" id="title-text"></div>
+            <div class="text-overlay" id="content-text"></div>
+        </div>
+        <div class="controls" id="controls">
+            <input type="text" id="title-input" placeholder="أدخل العنوان">
+            <textarea id="content-input" placeholder="أدخل المحتوى"></textarea>
+            <button onclick="printImage()">طباعة القصاصة</button>
+        </div>
+        <div class="text-formatting" id="text-formatting">
+            <label for="text-align">محاذاة النص:</label>
+            <select id="text-align" onchange="updateTextAlignment()">
+                <option value="center">وسط</option>
+                <option value="right">يمين</option>
+            </select>
+
+            <label for="font-size">حجم الخط:</label>
+            <input type="number" id="font-size" min="10" max="100" value="16" onchange="updateFontSize()">
+
+            <label for="font-weight">سمك الخط:</label>
+            <select id="font-weight" onchange="updateFontWeight()">
+                <option value="normal">عادي</option>
+                <option value="bold">غامق</option>
+            </select>
+
+            <label for="text-color">لون النص:</label>
+            <input type="color" id="text-color" onchange="updateTextColor()">
+
+            <label for="text-decoration">تنسيق النص:</label>
+            <select id="text-decoration" onchange="updateTextDecoration()">
+                <option value="none">بدون</option>
+                <option value="underline">تسطير</option>
+                <option value="line-through">خط في الوسط</option>
+                <option value="overline">خط فوق النص</option>
+            </select>
+
+            <label for="font-style">نمط الخط:</label>
+            <select id="font-style" onchange="updateFontStyle()">
+                <option value="normal">عادي</option>
+                <option value="italic">مائل</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
